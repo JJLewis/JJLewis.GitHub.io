@@ -24,3 +24,36 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$(document).ready(function(){
+  $("#portfolio .owl-carousel").owlCarousel({
+        animateOut: 'slideOutLeft',
+        animateIn: 'slideInRight',
+        items:1,
+        margin:0,
+        stagePadding:0,
+        smartSpeed:450,
+        autoWidth:false,
+        autoplay:true,
+      autoplayTimeout:5000,
+      loop:true
+  });
+    $("#bio .owl-carousel").owlCarousel({
+        animateOut: 'fadeOut',
+        animateIn: 'slideInRight',
+        items:2,
+        margin:0,
+        stagePadding:0,
+        smartSpeed:450,
+        autoWidth:false,
+        autoHeight:false,
+        autoplay:true,
+        autoplayTimeout:5000,
+        loop:true,
+        nav:true,
+        navText:[
+            "<i class='btn btn-xl col-xs-2 fa fa-arrow-left'></i>",
+            "<i class='btn btn-xl col-xs-2 col-xs-push-8 fa fa-arrow-right'></i>"
+        ]
+  });
+});
